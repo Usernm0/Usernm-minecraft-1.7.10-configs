@@ -1,0 +1,1 @@
+This scripts should be used on client only, because you can't install NEI on server, and haven't NEI api on server. It's only cosmetic, so clients haven't problems without this fixes.
