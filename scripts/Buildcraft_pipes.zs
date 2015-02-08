@@ -4,8 +4,9 @@
 // Multiplayer for pipes amount from recipes. 
 val mul = 4;
 // Used for two-component pipes like dazuli and emzuli.
-// If you nerf it, disable shapeless recipes for it. 
 val mul2 = 2;
+// If you nerf it, disable shapeless recipes for it. 
+val disableShapeless = 0;
 
 // Transport pipes
 
@@ -110,10 +111,12 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis> * mu
 
 // Dazuli pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli:*>);
+if (disableShapeless == 0){
 recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli>,
  [<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis>, <ore:anyDiamond>, <ore:paneGlass>]);
 recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli>,
  [<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond>, <ore:anyLapis>, <ore:paneGlass>]);
+}
 // Dazuli recipe 2
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli> * mul2,
  [[<ore:anyLapis>, <ore:paneGlass>, <ore:anyDiamond>],
@@ -122,10 +125,12 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli> * 
 
 // Emzuli pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli:*>);
+if (disableShapeless == 0){
 recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli>,
  [<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis>, <ore:anyEmerald>, <ore:paneGlass>]);
 recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli>,
  [<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald>, <ore:anyLapis>, <ore:paneGlass>]);
+}
 // Emzuli recipe 2
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli> * mul2,
  [[<ore:anyLapis>, <ore:paneGlass>, <ore:anyEmerald>],
