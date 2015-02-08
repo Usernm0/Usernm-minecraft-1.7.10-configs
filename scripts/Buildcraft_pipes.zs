@@ -1,5 +1,12 @@
 // Nerf buildcraft pipes to craft them through gregtech pipes.
 // Script created by Usernm.
+
+// Multiplayer for pipes amount from recipes. 
+val mul = 4;
+// Used for two-component pipes like dazuli and emzuli.
+// If you nerf it, disable shapeless recipes for it. 
+val mul2 = 2;
+
 // Transport pipes
 
 // Create anyMediumItemPipe oreDict entry for medium gt item pipes
@@ -14,7 +21,7 @@
 
 // Wooden pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemswood:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemswood> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemswood> * mul,
  [[<ore:plankWood>, <ore:paneGlass>, <ore:plankWood>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:plankWood>, <ore:paneGlass>, <ore:plankWood>]]);
@@ -25,42 +32,42 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemswood> * 4,
 
 // Emerald pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald> * mul,
  [[<ore:anyEmerald>, <ore:paneGlass>, <ore:anyEmerald>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:anyEmerald>, <ore:paneGlass>, <ore:anyEmerald>]]);
 
 // Cobblestone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemscobblestone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemscobblestone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemscobblestone> * mul,
  [[<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>]]);
 
 // Stone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstone> * mul,
  [[<ore:stoneSmooth>, <ore:paneGlass>, <ore:stoneSmooth>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:stoneSmooth>, <ore:paneGlass>, <ore:stoneSmooth>]]);
 
 // Quartz pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsquartz:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsquartz> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsquartz> * mul,
  [[<ore:craftingQuartz>, <ore:paneGlass>, <ore:craftingQuartz>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:craftingQuartz>, <ore:paneGlass>, <ore:craftingQuartz>]]);
 
 // Iron pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsiron:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsiron> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsiron> * mul,
  [[<ore:stickAnyIron>, <ore:paneGlass>, <ore:stickAnyIron>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:stickAnyIron>, <ore:paneGlass>, <ore:stickAnyIron>]]);
 
 // Gold pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsgold:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsgold> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsgold> * mul,
  [[<ore:stickGold>, <ore:paneGlass>, <ore:stickGold>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:stickGold>, <ore:paneGlass>, <ore:stickGold>]]);
@@ -73,14 +80,14 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsgold> * 4,
 
 // Diamond pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond> * mul,
  [[<ore:anyDiamond>, <ore:paneGlass>, <ore:anyDiamond>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:anyDiamond>, <ore:paneGlass>, <ore:anyDiamond>]]);
 
 // Obsidian pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsobsidian:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsobsidian> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsobsidian> * mul,
  [[<ore:stoneObsidian>, <ore:paneGlass>, <ore:stoneObsidian>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:stoneObsidian>, <ore:paneGlass>, <ore:stoneObsidian>]]);
@@ -96,7 +103,7 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsobsidian> *
 
 // Lazuli pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis> * mul,
  [[<ore:anyLapis>, <ore:paneGlass>, <ore:anyLapis>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:anyLapis>, <ore:paneGlass>, <ore:anyLapis>]]);
@@ -108,7 +115,7 @@ recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli>
 recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli>,
  [<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond>, <ore:anyLapis>, <ore:paneGlass>]);
 // Dazuli recipe 2
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli> * 2,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli> * mul2,
  [[<ore:anyLapis>, <ore:paneGlass>, <ore:anyDiamond>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:anyLapis>, <ore:paneGlass>, <ore:anyDiamond>]]);
@@ -120,14 +127,14 @@ recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli>,
 recipes.addShapeless(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli>,
  [<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald>, <ore:anyLapis>, <ore:paneGlass>]);
 // Emzuli recipe 2
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli> * 2,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli> * mul2,
  [[<ore:anyLapis>, <ore:paneGlass>, <ore:anyEmerald>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:anyLapis>, <ore:paneGlass>, <ore:anyEmerald>]]);
 
 // Sandstone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemssandstone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemssandstone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemssandstone> * mul,
  [[<ore:stoneSand>, <ore:paneGlass>, <ore:stoneSand>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:stoneSand>, <ore:paneGlass>, <ore:stoneSand>]]);
@@ -142,21 +149,21 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemssandstone> 
 
 // Void pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsvoid:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsvoid> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsvoid> * mul,
  [[<ore:anyEnder>, <ore:paneGlass>, <ore:anyEnder>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:anyEnder>, <ore:paneGlass>, <ore:anyEnder>]]);
 
 // Stripes pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstripes:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstripes> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstripes> * mul,
  [[<ore:gearGold>, <ore:paneGlass>, <ore:gearGold>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<ore:gearGold>, <ore:paneGlass>, <ore:gearGold>]]);
 
 // Clay pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsclay:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsclay> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsclay> * mul,
  [[<minecraft:clay>, <ore:paneGlass>, <minecraft:clay>],
   [<ore:paneGlass>, <ore:anyMediumItemPipe>, <ore:paneGlass>],
   [<minecraft:clay>, <ore:paneGlass>, <minecraft:clay>]]);
@@ -172,70 +179,70 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsclay> * 4,
 
 // Wooden pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidswood:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidswood> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidswood> * mul,
  [[<ore:plankWood>, <ore:paneGlass>, <ore:plankWood>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:plankWood>, <ore:paneGlass>, <ore:plankWood>]]);
 
 // Cobblestone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidscobblestone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidscobblestone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidscobblestone> * mul,
  [[<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>]]);
 
 // Stone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsstone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsstone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsstone> * mul,
  [[<ore:stoneSmooth>, <ore:paneGlass>, <ore:stoneSmooth>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:stoneSmooth>, <ore:paneGlass>, <ore:stoneSmooth>]]);
 
 // Quartz pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsquartz:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsquartz> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsquartz> * mul,
  [[<ore:craftingQuartz>, <ore:paneGlass>, <ore:craftingQuartz>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:craftingQuartz>, <ore:paneGlass>, <ore:craftingQuartz>]]);
 
 // Iron pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsiron:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsiron> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsiron> * mul,
  [[<ore:stickAnyIron>, <ore:paneGlass>, <ore:stickAnyIron>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:stickAnyIron>, <ore:paneGlass>, <ore:stickAnyIron>]]);
 
 // Gold pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsgold:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsgold> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsgold> * mul,
  [[<ore:stickGold>, <ore:paneGlass>, <ore:stickGold>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:stickGold>, <ore:paneGlass>, <ore:stickGold>]]);
 
 // Emerald pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsemerald:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsemerald> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsemerald> * mul,
  [[<ore:anyEmerald>, <ore:paneGlass>, <ore:anyEmerald>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:anyEmerald>, <ore:paneGlass>, <ore:anyEmerald>]]);
 
 // Diamond pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsdiamond:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsdiamond> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsdiamond> * mul,
  [[<ore:anyDiamond>, <ore:paneGlass>, <ore:anyDiamond>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:anyDiamond>, <ore:paneGlass>, <ore:anyDiamond>]]);
 
 // Sandstone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidssandstone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidssandstone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidssandstone> * mul,
  [[<ore:stoneSand>, <ore:paneGlass>, <ore:stoneSand>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:stoneSand>, <ore:paneGlass>, <ore:stoneSand>]]);
 
 // Void pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsvoid:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsvoid> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsvoid> * mul,
  [[<ore:anyEnder>, <ore:paneGlass>, <ore:anyEnder>],
   [<ore:paneGlass>, <ore:anyMediumFluidPipe>, <ore:paneGlass>],
   [<ore:anyEnder>, <ore:paneGlass>, <ore:anyEnder>]]);
@@ -246,70 +253,70 @@ val wireX4RedAlloy = <gregtech:gt.blockmachines:2002>;
 
 // Wooden pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerwood:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerwood> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerwood> * mul,
  [[<ore:plankWood>, <ore:paneGlass>, <ore:plankWood>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:plankWood>, <ore:paneGlass>, <ore:plankWood>]]);
 
 // Cobblestone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowercobblestone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowercobblestone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowercobblestone> * mul,
  [[<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>]]);
 
 // Stone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerstone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerstone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerstone> * mul,
  [[<ore:stoneSmooth>, <ore:paneGlass>, <ore:stoneSmooth>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:stoneSmooth>, <ore:paneGlass>, <ore:stoneSmooth>]]);
 
 // Quartz pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerquartz:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerquartz> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerquartz> * mul,
  [[<ore:craftingQuartz>, <ore:paneGlass>, <ore:craftingQuartz>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:craftingQuartz>, <ore:paneGlass>, <ore:craftingQuartz>]]);
 
 // Iron pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepoweriron:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepoweriron> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepoweriron> * mul,
  [[<ore:stickAnyIron>, <ore:paneGlass>, <ore:stickAnyIron>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:stickAnyIron>, <ore:paneGlass>, <ore:stickAnyIron>]]);
 
 // Gold pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowergold:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowergold> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowergold> * mul,
  [[<ore:stickGold>, <ore:paneGlass>, <ore:stickGold>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:stickGold>, <ore:paneGlass>, <ore:stickGold>]]);
 
 // Emerald pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepoweremerald:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepoweremerald> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepoweremerald> * mul,
  [[<ore:anyEmerald>, <ore:paneGlass>, <ore:anyEmerald>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:anyEmerald>, <ore:paneGlass>, <ore:anyEmerald>]]);
 
 // Diamond pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerdiamond:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerdiamond> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowerdiamond> * mul,
  [[<ore:anyDiamond>, <ore:paneGlass>, <ore:anyDiamond>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:anyDiamond>, <ore:paneGlass>, <ore:anyDiamond>]]);
 
 // Sandstone pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowersandstone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowersandstone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipepowersandstone> * mul,
  [[<ore:stoneSand>, <ore:paneGlass>, <ore:stoneSand>],
   [<ore:paneGlass>, wireX4RedAlloy, <ore:paneGlass>],
   [<ore:stoneSand>, <ore:paneGlass>, <ore:stoneSand>]]);
 
 // Cobblestone structural pipe
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipestructurecobblestone:*>);
-recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipestructurecobblestone> * 4,
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipestructurecobblestone> * mul,
  [[<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>],
   [<ore:paneGlass>, <minecraft:gravel>, <ore:paneGlass>],
   [<ore:stoneCobble>, <ore:paneGlass>, <ore:stoneCobble>]]);
