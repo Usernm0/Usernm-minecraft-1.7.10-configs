@@ -8,7 +8,7 @@ AlloySmelter.addRecipe(plateFirestone, dustFirestone * 2, moldPlate * 0, 1200, 1
 
 val dustRuby = <gregtech:gt.metaitem.01:2502>;
 val plateRuby = <gregtech:gt.metaitem.01:17502>;
-AlloySmelter.addRecipe(plateRuby, dustRuby * 2, moldPlate * 0, 1200, 2);
+AlloySmelter.addRecipe(plateRuby, dustRuby * 2, moldPlate * 0, 1200, 120);
 
 val dustSapphireBlue = <gregtech:gt.metaitem.01:2503>;
 val plateSapphireBlue = <gregtech:gt.metaitem.01:17503>;
