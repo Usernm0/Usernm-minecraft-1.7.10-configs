@@ -3,7 +3,7 @@
 
 // Options
 // Saplings output multiplayer
-var mul = 4;
+var mul = 1;
 
 // Variables
 var saplingOak = <minecraft:sapling>;
